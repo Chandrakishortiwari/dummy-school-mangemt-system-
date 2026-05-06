@@ -10,13 +10,13 @@ export default function StatCard({ title, value, icon: Icon, color, change, suff
   const c = colors[color] || colors.blue;
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-5 flex items-start gap-4 hover:shadow-md transition-shadow duration-200">
+    <div className="bg-white rounded-xl border border-slate-200 p-5 flex sm:flex-row flex-col items-start gap-4 hover:shadow-md transition-shadow duration-200">
       <div className={`${c.icon} p-3 rounded-xl flex-shrink-0`}>
         <Icon size={22} className={c.text} />
       </div>
       <div className="min-w-0 flex-1">
         <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">{title}</p>
-        <p className="text-2xl font-bold text-slate-800 leading-tight">
+        <p className="sm:text-2xl text-lg font-bold text-slate-800 leading-tight">
           {value}{suffix}
         </p>
         {change !== undefined && (
